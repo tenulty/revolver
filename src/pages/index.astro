@@ -1,6 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
+	<main class="mx-auto h-screen max-w-xl bg-gray-900 px-9 py-9">
+		<Image
+			class="m-auto"
+			src="/media/dance-moves.gif"
+			alt="Never gonna"
+			height={700}
+			width={700}
+		/>
+		<h1 class="text-center text-4xl font-black text-white">
+			Welcome to Revolver MC!
+		</h1>
+
+		<p class="pb-5 text-center text-sm text-gray-500">
+			Make yourself at home. -tenulty
+		</p>
+
+		<p class="text-center text-white">
+			If you'd like to join our Minecraft session, but you don't have the
+			correct mods installed, this is the perfect place to install them.
+		</p>
+	</main>
 </Layout>
