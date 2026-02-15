@@ -1,0 +1,9 @@
+printWidth = 80
+singleQuote = false
+useTabs = true
+plugins = ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+
+[[overrides]]
+files = ["**/*.astro"]
+[overrides.options]
+parser = "astro"
