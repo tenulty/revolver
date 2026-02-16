@@ -16,21 +16,33 @@ import { Image } from "astro:assets";
 			height={700}
 			width={700}
 			draggable={false}
+			loading="eager"
 		/>
 
 		<div class="p-8"></div>
 
-		<div class="mx-auto w-fit">
-			<button aria-label="Multiplayer">
+		<div class="relative mx-auto w-fit">
+			<button aria-label="Multiplayer" class="group outline-none">
 				<span class="hidden">Multiplayer</span>
 
 				<Image
-					class="m-auto select-none"
+					class="m-auto block group-hover:hidden group-focus:hidden"
 					src="/media/multiplayer.webp"
 					alt="Minecraft Multiplayer button"
 					height={60}
 					width={600}
 					draggable={false}
+					loading="eager"
+				/>
+
+				<Image
+					class="m-auto hidden group-hover:block group-focus:block"
+					src="/media/multiplayer-hovered.webp"
+					alt="Hovered over Minecraft Multiplayer button"
+					height={60}
+					width={600}
+					draggable={false}
+					loading="eager"
 				/>
 			</button>
 		</div>
