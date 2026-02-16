@@ -17,7 +17,9 @@ const { nthOrder, name, description, imageURL, modPageURL } = Astro.props;
 	href={modPageURL}
 	target="_blank"
 >
-	<span class="h-fit w-14 text-4xl whitespace-nowrap">
+	<span
+		class="hidden h-fit w-14 text-2xl whitespace-nowrap sm:block sm:text-4xl"
+	>
 		{`${nthOrder || 0} :`}
 	</span>
 
@@ -32,7 +34,9 @@ const { nthOrder, name, description, imageURL, modPageURL } = Astro.props;
 	<div class="w-5"></div>
 
 	<div class="flex w-[90%] flex-col pr-6">
-		<h2 class="text-3xl">{name}</h2>
-		<p class="text-3xl text-[rgba(255,255,255,0.5)]">{description}</p>
+		<h2 class="text-xl sm:text-3xl sm:leading-8">{name}</h2>
+		<p class="text-xl text-[rgba(255,255,255,0.5)] sm:text-3xl">
+			{description}
+		</p>
 	</div>
 </a>
