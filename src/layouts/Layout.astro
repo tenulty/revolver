@@ -10,6 +10,27 @@ import "../styles/global.css";
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Revolver MC</title>
+
+		<style is:global>
+			@font-face {
+				font-family: "Minecraft";
+				src: url("/fonts/MinecraftDefault-Regular.ttf") format("truetype");
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			html,
+			body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				image-rendering: pixelated;
+				background: url("/blocks/dirt-menu.webp");
+				background-size: 1000px 562px;
+				font-family: "Minecraft", monospace;
+			}
+		</style>
 	</head>
 	<body>
 		<noscript class="absolute right-0 left-0 mx-auto w-fit">
@@ -22,24 +43,3 @@ import "../styles/global.css";
 		<slot />
 	</body>
 </html>
-
-<style is:global>
-	@font-face {
-		font-family: "Minecraft";
-		src: url("/fonts/MinecraftDefault-Regular.ttf") format("truetype");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		image-rendering: pixelated;
-		background: url("/blocks/dirt-menu.webp");
-		background-size: 1000px 562px;
-		font-family: "Minecraft", monospace;
-	}
-</style>
