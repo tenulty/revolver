@@ -1,14 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+
+import Mod from "../components/Mod.astro";
+import Modlist from "../components/Modlist.astro";
 ---
 
 <Layout>
-	<div class="p-4"></div>
+	<div class="h-screen w-screen">
+		<div class="flex h-[12.5%] flex-col items-center justify-center">
+			<h1 class="block text-center text-4xl">Installed Revolver Mods</h1>
+			<p class="text-2xl text-[rgba(255,255,255,0.5)]">Forge version 1.20.1</p>
+		</div>
 
-	<h1 class="text-center text-3xl">List of Mods in Minecraft Revolver</h1>
+		<Modlist class="h-[75%] overflow-y-scroll bg-[rgba(0,0,0,0.5)]">
+			<Mod
+				nthOrder={1}
+				name="[TaCZ] Timeless and Classics Zero"
+				description="The most Immersive and Customizable modern FPS experience in Minecraft - A complete Remaster of the TaC gun mod by the original team."
+				imageURL="/mods/tacz.webp"
+				modPageURL="https://modrinth.com/mod/timeless-and-classics-zero/versions?g=1.20.1&version=1.20.1#download"
+			/>
 
-	<div class="p-4"></div>
+			<Mod
+				nthOrder={2}
+				name="Create"
+				description="Aesthetic Technology that empowers the Player"
+				imageURL="/mods/create.webp"
+				modPageURL="https://modrinth.com/mod/create/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
+			/>
 
-	<div class="h-[80vh] bg-[rgba(0,0,0,0.5)]">Test</div>
+			<Mod
+				nthOrder={3}
+				name="SecurityCraft"
+				description="Adds plenty of blocks and items to defend and secure your base with."
+				imageURL="/mods/security-craft.webp"
+				modPageURL="https://modrinth.com/mod/security-craft/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
+			/>
+
+			<Mod
+				nthOrder={4}
+				name="Alex's Mobs"
+				description="85+ New mobs with stylistic quality above the default game."
+				imageURL="/mods/alexs-mobs.webp"
+				modPageURL="https://modrinth.com/mod/alexs-mobs/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
+			/>
+
+			<Mod
+				nthOrder={5}
+				name="Villager Protector"
+				description="By MartinCougar, Disables player attacks on villagers to prevent accidental hits."
+				imageURL="/mods/villager-protector.webp"
+				modPageURL="https://modrinth.com/mod/vllager-protector/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
+			/>
+		</Modlist>
+
+		<div class="flex h-[12.5%] items-center justify-center">
+			<span class="text-3xl">
+				Depending on the mod, they are available for install through
+				<a href="https://modrinth.com/" class="text-green-500 underline"
+					>Modrinth</a
+				><span>{" or"}</span>
+				<a href="https://www.curseforge.com/" class="text-orange-500 underline"
+					>CurseForge</a
+				><span>{"."}</span>
+			</span>
+		</div>
+	</div>
 </Layout>
