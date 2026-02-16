@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer utilities {
+	@keyframes scale-pulse {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+	}
+	.animate-subtitle-pulse {
+		animation: scale-pulse 2s ease-in-out infinite;
+	}
+}
