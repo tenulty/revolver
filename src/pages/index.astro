@@ -57,6 +57,7 @@ export const prerender = false;
 
 		<div class="relative">
 			<Image
+				id="logo"
 				class="m-auto select-none"
 				src="/media/minecraft-revolver-mode.webp"
 				alt="Logo of Minecraft: Revolver Mode"
@@ -174,4 +175,18 @@ export const prerender = false;
 			</div>
 		</div>
 	</main>
+
+	<script is:inline>
+		(() => {
+			const logo = document.getElementById("logo");
+
+			if (!logo || !(logo instanceof HTMLImageElement)) {
+				return;
+			}
+
+			logo.addEventListener("click", function () {
+				logo.src = "/media/minceraft-revolver-mode.webp";
+			});
+		})();
+	</script>
 </Layout>
