@@ -41,11 +41,14 @@ const subtitles = [
 ];
 const chosenSubtitleHTML = subtitles[randomInteger(0, subtitles.length - 1)];
 
+const responsiveSubtitleClasses =
+	"lg:left-[50%] md:left-[35%] sm:left-[15%] sm:rotate-355 md:text-3xl sm:text-2xl left-10% sm:top-full sm:w-125 text-lg rotate-0 block w-full";
+
 export const prerender = false;
 ---
 
 <Layout>
-	<main class="mx-auto h-screen bg-transparent px-9 py-9">
+	<main class="mx-auto h-screen overflow-clip bg-transparent px-9 py-9">
 		<div class="p-4"></div>
 
 		<h1 class="hidden">Welcome to the Revolver Minecraft Server!</h1>
@@ -62,13 +65,13 @@ export const prerender = false;
 			/>
 
 			<div
-				class="animate-subtitle-pulse absolute top-full left-[50%] w-125 rotate-350 text-center text-3xl text-[#ffff00] text-shadow-[2.5px_2.5px_0px_#3f3f00]"
+				class={`animate-subtitle-pulse absolute text-center text-[#ffff00] text-shadow-[2.5px_2.5px_0px_#3f3f00] ${responsiveSubtitleClasses}`}
 			>
 				<span set:html={chosenSubtitleHTML} />
 			</div>
 		</div>
 
-		<div class="p-14"></div>
+		<div class="p-8 sm:p-14"></div>
 
 		<div class="mx-auto h-fit w-fit">
 			<a
