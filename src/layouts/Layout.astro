@@ -8,6 +8,7 @@ import Analytics from "@vercel/analytics/astro";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+
 		<meta
 			name="description"
 			content="This is the official site of the Revolver Minecraft multiplayer server. Check out our mods and server status here!"
@@ -18,6 +19,16 @@ import Analytics from "@vercel/analytics/astro";
 		/>
 		<meta name="author" content="tenulty" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta property="og:image" content="/favicon.png" />
+		<meta property="og:site_name" content="Revolver MC" />
+		<meta property="og:title" content="Revolver MC" />
+		<meta
+			property="og:description"
+			content="This is the official site of the Revolver Minecraft multiplayer server. Check out our mods and server status here!"
+		/>
+		<meta property="og:url" content="https://revolvermc.vercel.app" />
+
 		<meta name="generator" content={Astro.generator} />
 
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
