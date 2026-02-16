@@ -4,26 +4,35 @@ import { Image } from "astro:assets";
 ---
 
 <Layout>
-	<main class="mx-auto h-screen max-w-xl bg-gray-950 px-9 py-9">
+	<main class="mx-auto h-screen bg-transparent px-9 py-9">
+		<div class="p-4"></div>
+
+		<h1 class="hidden">Welcome to the Revolver Minecraft Server!</h1>
+
 		<Image
-			class="m-auto"
-			src="/media/Minecraft Revolver Mode.png"
-			alt="Logo of Minecraft: Poisonous Potato"
+			class="m-auto select-none"
+			src="/media/minecraft-revolver-mode.webp"
+			alt="Logo of Minecraft: Revolver Mode"
 			height={700}
 			width={700}
+			draggable={false}
 		/>
 
-		<h1 class="pt-9 text-center text-4xl font-black text-white">
-			Welcome to Revolver!
-		</h1>
+		<div class="p-8"></div>
 
-		<p class="pb-5 text-center text-sm text-gray-500">
-			Make yourself at home. -tenulty
-		</p>
+		<div class="mx-auto w-fit">
+			<button aria-label="Multiplayer">
+				<span class="hidden">Multiplayer</span>
 
-		<p class="text-center text-white">
-			If you'd like to join our Minecraft session, but you don't have the
-			correct mods installed, this is the perfect place to install them.
-		</p>
+				<Image
+					class="m-auto select-none"
+					src="/media/multiplayer.webp"
+					alt="Minecraft Multiplayer button"
+					height={60}
+					width={600}
+					draggable={false}
+				/>
+			</button>
+		</div>
 	</main>
 </Layout>
