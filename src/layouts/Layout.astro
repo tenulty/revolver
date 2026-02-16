@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -51,6 +52,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		</style>
 	</head>
 	<body>
+		<Analytics />
 		<SpeedInsights />
 
 		<noscript class="absolute right-0 left-0 mx-auto w-fit">
