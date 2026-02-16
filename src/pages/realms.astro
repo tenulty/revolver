@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout>
+	<main class="px-9 py-8">
+		<Image
+			class="mx-auto"
+			src="/media/dance-moves.gif"
+			alt="Go, Johnny, go, go"
+			width={500}
+			height={500}
+			loading="eager"
+		/>
+	</main>
+</Layout>
