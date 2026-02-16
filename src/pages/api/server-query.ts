@@ -47,7 +47,8 @@ export const GET = (async () => {
 			return createJSONResponse({
 				status: 500,
 				json: {
-					error: "Something wrong happened, and we can't identify it.",
+					errorRaw: JSON.stringify(err),
+					message: "Something wrong happened, and we can't identify it.",
 				},
 			});
 		}
@@ -56,7 +57,8 @@ export const GET = (async () => {
 			return createJSONResponse({
 				status: 500,
 				json: {
-					error: "Server not reachable (code: ECONNREFUSED)",
+					errorRaw: JSON.stringify(err),
+					message: "Server not reachable (code: ECONNREFUSED)",
 				},
 			});
 		}
@@ -64,7 +66,8 @@ export const GET = (async () => {
 		return createJSONResponse({
 			status: 500,
 			json: {
-				error: `Something wrong happened, and we haven't handled its error type: ${err.code}`,
+				errorRaw: JSON.stringify(err),
+				message: `Something wrong happened, and we haven't handled its error type: ${err.code}`,
 			},
 		});
 	}
