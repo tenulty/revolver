@@ -1,6 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+
+function randomInteger(min: number, max: number) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const subtitles = [
+	"GreasyPanda123 was the first to join.",
+	"Only 3 people play here long-term.",
+	"I will bring you down to China town.",
+	"This site was created by tenulty.",
+	"Play Halo 3 Legendary with me!",
+	`Your <u>actual</u> IP address is <span style="color: black; background: black; text-shadow: none;">${Astro.clientAddress}</span>`,
+	"Our favorite movie is A Fistful of Dollars.",
+	"missingno",
+	"Agartha is not a real place.",
+	"Do give your parrots some chocolate.",
+	"PC Gamer Demo!",
+	"Cool maybe? -GreasyPanda123",
+];
+const chosenSubtitleHTML = subtitles[randomInteger(0, subtitles.length - 1)];
+
+export const prerender = false;
 ---
 
 <Layout>
@@ -20,11 +44,11 @@ import { Image } from "astro:assets";
 				loading="eager"
 			/>
 
-			<span
-				class="animate-subtitle-pulse absolute top-full left-[50%] rotate-350 text-3xl text-[#ffff00] text-shadow-[3px_3px_0px_#3f3f00]"
+			<div
+				class="animate-subtitle-pulse absolute top-full left-[50%] w-125 rotate-350 text-center text-3xl text-[#ffff00] text-shadow-[2.5px_2.5px_0px_#3f3f00]"
 			>
-				I will bring you down to China town.
-			</span>
+				<span set:html={chosenSubtitleHTML} />
+			</div>
 		</div>
 
 		<div class="p-14"></div>
