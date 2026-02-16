@@ -20,6 +20,9 @@ importers:
       astro:
         specifier: ^5.17.1
         version: 5.17.2(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.57.1)(typescript@5.9.3)
+      minecraftstatuspinger:
+        specifier: ^1.2.2
+        version: 1.2.2
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18
@@ -1608,6 +1611,10 @@ packages:
 
   micromark@4.0.2:
     resolution: {integrity: sha512-zpe98Q6kvavpCr1NPVSCMebCKfD7CA2NqZ+rykeNhONIJBpc1tFKt9hucLGwha3jNTNI8lHpctWJWoimVF4PfA==}
+
+  minecraftstatuspinger@1.2.2:
+    resolution: {integrity: sha512-3PDWcifjw6cliGnGqw0+nJVWWPOcpLDyNLh4D84vCNzPD2h9REbN5Ne11I//CMkIu5xJiIuyGwI44gyRYYbpuw==}
+    engines: {node: '>=14.0.0'}
 
   minimatch@9.0.5:
     resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
@@ -3864,6 +3871,8 @@ snapshots:
       micromark-util-types: 2.0.2
     transitivePeerDependencies:
       - supports-color
+
+  minecraftstatuspinger@1.2.2: {}
 
   minimatch@9.0.5:
     dependencies:
