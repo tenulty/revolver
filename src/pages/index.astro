@@ -22,7 +22,12 @@ import { Image } from "astro:assets";
 		<div class="p-8"></div>
 
 		<div class="mx-auto h-fit w-fit">
-			<button aria-label="Multiplayer" class="group outline-none">
+			<a
+				id="multiplayer"
+				href="/multiplayer"
+				aria-label="Multiplayer"
+				class="group outline-none select-none"
+			>
 				<span class="hidden">Multiplayer</span>
 
 				<Image
@@ -44,7 +49,69 @@ import { Image } from "astro:assets";
 					draggable={false}
 					loading="eager"
 				/>
-			</button>
+			</a>
+
+			<div class="p-2"></div>
+
+			<div class="flex justify-between">
+				<a
+					id="mods"
+					href="/mods"
+					aria-label="Mods"
+					class="group outline-none select-none"
+				>
+					<span class="hidden">Mods</span>
+
+					<Image
+						class="m-auto block group-hover:hidden group-focus:hidden"
+						src="/media/mods.webp"
+						alt="Minecraft Mods button"
+						height={60}
+						width={294}
+						draggable={false}
+						loading="eager"
+					/>
+
+					<Image
+						class="m-auto hidden group-hover:block group-focus:block"
+						src="/media/mods-hovered.webp"
+						alt="Hovered over Minecraft Mods button"
+						height={60}
+						width={294}
+						draggable={false}
+						loading="eager"
+					/>
+				</a>
+
+				<a
+					id="realms"
+					href="/realms"
+					aria-label="Realms"
+					class="group outline-none select-none"
+				>
+					<span class="hidden">Minecraft Realms</span>
+
+					<Image
+						class="m-auto block group-hover:hidden group-focus:hidden"
+						src="/media/realms.webp"
+						alt="Minecraft Realms button"
+						height={60}
+						width={294}
+						draggable={false}
+						loading="eager"
+					/>
+
+					<Image
+						class="m-auto hidden group-hover:block group-focus:block"
+						src="/media/realms-hovered.webp"
+						alt="Hovered over Minecraft Realms button"
+						height={60}
+						width={294}
+						draggable={false}
+						loading="eager"
+					/>
+				</a>
+			</div>
 		</div>
 	</main>
 </Layout>
