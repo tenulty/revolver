@@ -80,3 +80,5 @@ export const GET = (async () => {
 
 	return response;
 }) satisfies APIRoute;
+
+export const prerender = false;
