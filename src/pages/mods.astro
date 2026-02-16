@@ -1,9 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-
 import Mod from "../components/Mod.astro";
-import Modlist from "../components/Modlist.astro";
 ---
 
 <Layout>
@@ -17,11 +14,11 @@ import Modlist from "../components/Modlist.astro";
 			</p>
 		</div>
 
-		<Modlist class="bg-[rgba(0,0,0,0.5)]">
+		<div class="bg-[rgba(0,0,0,0.5)]">
 			<Mod
 				nthOrder={1}
-				name="[TaCZ] Timeless and Classics Zero"
-				description="The most Immersive and Customizable modern FPS experience in Minecraft - A complete Remaster of the TaC gun mod by the original team."
+				name="Timeless and Classics Zero"
+				description="The most Immersive and Customizable modern FPS experience in Minecraft."
 				imageURL="/mods/tacz.webp"
 				modPageURL="https://modrinth.com/mod/timeless-and-classics-zero/versions?g=1.20.1&version=1.20.1#download"
 			/>
@@ -29,7 +26,7 @@ import Modlist from "../components/Modlist.astro";
 			<Mod
 				nthOrder={2}
 				name="Create"
-				description="Aesthetic Technology that empowers the Player"
+				description="Aesthetic Technology that empowers the Player."
 				imageURL="/mods/create.webp"
 				modPageURL="https://modrinth.com/mod/create/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
 			/>
@@ -57,7 +54,7 @@ import Modlist from "../components/Modlist.astro";
 				imageURL="/mods/villager-protector.webp"
 				modPageURL="https://modrinth.com/mod/vllager-protector/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
 			/>
-		</Modlist>
+		</div>
 
 		<!-- <div class="flex h-[12.5%] items-center justify-center"> -->
 		<!-- 	<span class="text-3xl"> -->
