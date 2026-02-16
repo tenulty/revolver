@@ -23,15 +23,18 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 
 			html,
 			body {
-				background-color: oklch(26.8% 0.007 34.298);
 				margin: 0;
 				width: 100%;
 				height: 100%;
 				image-rendering: pixelated;
+				font-family: "Minecraft", monospace;
+				background-color: #1e150f;
+				color: white;
+			}
+
+			#background {
 				background: url("/blocks/dirt-menu.webp");
 				background-size: 1000px 562px;
-				font-family: "Minecraft", monospace;
-				color: white;
 			}
 		</style>
 	</head>
@@ -43,6 +46,8 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 			available. What gives. &#62;:(
 		</noscript>
 
-		<slot />
+		<div id="background" class="h-screen w-screen">
+			<slot />
+		</div>
 	</body>
 </html>
