@@ -1,0 +1,17 @@
+---
+type Props = {
+	class?: string;
+};
+
+const { class: classNames } = Astro.props;
+---
+
+<div
+	id="modlist"
+	style="scrollbar-color: white transparent; outline: none; select-none;"
+	class={`scroll ${classNames}`}
+>
+	<div class="flex flex-col gap-4 p-12">
+		<slot />
+	</div>
+</div>
