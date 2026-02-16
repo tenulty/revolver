@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -34,6 +35,8 @@ import "../styles/global.css";
 		</style>
 	</head>
 	<body>
+		<SpeedInsights />
+
 		<noscript class="absolute right-0 left-0 mx-auto w-fit">
 			You don't have Javascript enabled. Some, or most functionality won't be
 			available. What gives. &#62;:(
