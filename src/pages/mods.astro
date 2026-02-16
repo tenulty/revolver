@@ -7,13 +7,17 @@ import Modlist from "../components/Modlist.astro";
 ---
 
 <Layout>
-	<div class="h-screen w-screen">
-		<div class="flex h-[12.5%] flex-col items-center justify-center">
-			<h1 class="block text-center text-4xl">Installed Revolver Mods</h1>
-			<p class="text-2xl text-[rgba(255,255,255,0.5)]">Forge version 1.20.1</p>
+	<div class="overflow-none h-screen w-screen">
+		<div class="flex flex-col items-center justify-center py-8">
+			<h1 class="block text-center text-3xl sm:text-4xl">
+				Installed Revolver Mods
+			</h1>
+			<p class="text-xl text-[rgba(255,255,255,0.5)] sm:text-2xl">
+				Forge version 1.20.1
+			</p>
 		</div>
 
-		<Modlist class="h-[75%] overflow-y-scroll bg-[rgba(0,0,0,0.5)]">
+		<Modlist class="bg-[rgba(0,0,0,0.5)]">
 			<Mod
 				nthOrder={1}
 				name="[TaCZ] Timeless and Classics Zero"
@@ -55,16 +59,16 @@ import Modlist from "../components/Modlist.astro";
 			/>
 		</Modlist>
 
-		<div class="flex h-[12.5%] items-center justify-center">
-			<span class="text-3xl">
-				Depending on the mod, they are available for install through
-				<a href="https://modrinth.com/" class="text-green-500 underline"
-					>Modrinth</a
-				><span>{" or"}</span>
-				<a href="https://www.curseforge.com/" class="text-orange-500 underline"
-					>CurseForge</a
-				><span>{"."}</span>
-			</span>
-		</div>
+		<!-- <div class="flex h-[12.5%] items-center justify-center"> -->
+		<!-- 	<span class="text-3xl"> -->
+		<!-- 		Depending on the mod, they are available for install through -->
+		<!-- 		<a href="https://modrinth.com/" class="text-green-500 underline" -->
+		<!-- 			>Modrinth</a -->
+		<!-- 		><span>{" or"}</span> -->
+		<!-- 		<a href="https://www.curseforge.com/" class="text-orange-500 underline" -->
+		<!-- 			>CurseForge</a -->
+		<!-- 		><span>{"."}</span> -->
+		<!-- 	</span> -->
+		<!-- </div> -->
 	</div>
 </Layout>
