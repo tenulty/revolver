@@ -55,13 +55,13 @@ import Analytics from "@vercel/analytics/astro";
 				height: 100%;
 				image-rendering: pixelated;
 				font-family: "Minecraft", monospace;
-				background-color: #1e150f;
 				color: white;
 			}
 
-			#background {
+			body {
 				background: url("/blocks/dirt-menu.webp");
 				background-size: 1000px 562px;
+				background-color: #1e150f;
 			}
 		</style>
 	</head>
@@ -74,8 +74,6 @@ import Analytics from "@vercel/analytics/astro";
 			available. What gives. &#62;:(
 		</noscript>
 
-		<div id="background" class="h-screen w-screen">
-			<slot />
-		</div>
+		<slot />
 	</body>
 </html>
