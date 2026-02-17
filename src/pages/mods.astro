@@ -1,6 +1,72 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Mod from "../components/Mod.astro";
+import Modlist from "../components/Modlist.astro";
+import type { Mod } from "../components/Modlist.astro";
+
+const mods: Mod[] = [
+	{
+		name: "Timeless & Classics Zero",
+		description:
+			"The most Immersive and Customizable modern FPS experience in Minecraft.",
+		imageURL: "/mods/tacz.webp",
+		modPageURL:
+			"https://modrinth.com/mod/timeless-and-classics-zero/versions?g=1.20.1&version=1.20.1#download",
+	},
+	{
+		name: "Gunpowder Revolution",
+		description:
+			"Reviving the forgotten revolutionary creations of the imperialist era.",
+		imageURL: "/mods/gunpowder-revolution.webp",
+		modPageURL:
+			"https://www.curseforge.com/minecraft/customization/tacz-gunpowder-revolution-great-war-gunpack/files/6982844",
+	},
+	{
+		name: "Create",
+		description: "Aesthetic Technology that empowers the Player.",
+		imageURL: "/mods/create.webp",
+		modPageURL:
+			"https://modrinth.com/mod/create/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download",
+	},
+	{
+		name: "SecurityCraft",
+		description:
+			"Adds plenty of blocks and items to defend and secure your base with.",
+		imageURL: "/mods/security-craft.webp",
+		modPageURL:
+			"https://modrinth.com/mod/security-craft/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download",
+	},
+	{
+		name: "Alex's Mobs",
+		description: "85+ New mobs with stylistic quality above the default game.",
+		imageURL: "/mods/alexs-mobs.webp",
+		modPageURL:
+			"https://modrinth.com/mod/alexs-mobs/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download",
+	},
+	{
+		name: "Villager Protector",
+		description:
+			"By MartinCougar, Disables player attacks on villagers to prevent accidental hits.",
+		imageURL: "/mods/villager-protector.webp",
+		modPageURL:
+			"https://modrinth.com/mod/vllager-protector/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download",
+	},
+	{
+		name: "Simple Hats",
+		description:
+			"Simple Hats is an expandable cosmetic hat mod that allows users to define their own hats.",
+		imageURL: "/mods/simple-hats.webp",
+		modPageURL:
+			"https://modrinth.com/mod/simple-hats/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download",
+	},
+	{
+		name: "Curious Lib",
+		description:
+			"A flexible and expandable accessory/equipment API for users and developers.",
+		imageURL: "/mods/curios.webp",
+		modPageURL:
+			"https://modrinth.com/mod/curios/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download",
+	},
+];
 ---
 
 <Layout>
@@ -15,45 +81,7 @@ import Mod from "../components/Mod.astro";
 		</div>
 
 		<div class="bg-[rgba(0,0,0,0.5)] py-10">
-			<Mod
-				nthOrder={1}
-				name="Timeless & Classics Zero"
-				description="The most Immersive and Customizable modern FPS experience in Minecraft."
-				imageURL="/mods/tacz.webp"
-				modPageURL="https://modrinth.com/mod/timeless-and-classics-zero/versions?g=1.20.1&version=1.20.1#download"
-			/>
-
-			<Mod
-				nthOrder={2}
-				name="Create"
-				description="Aesthetic Technology that empowers the Player."
-				imageURL="/mods/create.webp"
-				modPageURL="https://modrinth.com/mod/create/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
-			/>
-
-			<Mod
-				nthOrder={3}
-				name="SecurityCraft"
-				description="Adds plenty of blocks and items to defend and secure your base with."
-				imageURL="/mods/security-craft.webp"
-				modPageURL="https://modrinth.com/mod/security-craft/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
-			/>
-
-			<Mod
-				nthOrder={4}
-				name="Alex's Mobs"
-				description="85+ New mobs with stylistic quality above the default game."
-				imageURL="/mods/alexs-mobs.webp"
-				modPageURL="https://modrinth.com/mod/alexs-mobs/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
-			/>
-
-			<Mod
-				nthOrder={5}
-				name="Villager Protector"
-				description="By MartinCougar, Disables player attacks on villagers to prevent accidental hits."
-				imageURL="/mods/villager-protector.webp"
-				modPageURL="https://modrinth.com/mod/vllager-protector/versions?g=1.20.1&l=forge&version=1.20.1&loader=forge#download"
-			/>
+			<Modlist mods={mods} />
 		</div>
 
 		<!-- <div class="flex h-[12.5%] items-center justify-center"> -->
