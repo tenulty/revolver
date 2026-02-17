@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+
+type Props = {
+	mods: Mod[];
+};
+
+export type Mod = {
+	name: string;
+	description: string;
+	imageURL: string;
+	modPageURL: string;
+};
+
+const { mods } = Astro.props;
+---
+
+<div>
+	{
+		mods.map(({ name, description, imageURL, modPageURL }, index) => {
+			return (
+				<a
+					class="group flex flex-row items-center border-3 border-solid border-transparent px-4 py-2 outline-none hover:border-white hover:bg-[rgba(0,0,0,0.9)] focus:border-white focus:bg-[rgba(0,0,0,0.9)]"
+					href={modPageURL}
+					target="_blank"
+				>
+					<span class="hidden h-fit w-14 text-2xl whitespace-nowrap sm:block sm:text-4xl">
+						{`${index + 1 || 0} :`}
+					</span>
+
+					<Image
+						class="h-20 w-20"
+						src={imageURL}
+						width={500}
+						height={500}
+						alt={`${name} - ${description}`}
+					/>
+
+					<div class="w-5" />
+
+					<div class="flex w-[90%] flex-col pr-6">
+						<h2 class="text-xl sm:text-3xl sm:leading-8">{name}</h2>
+						<p class="text-xl text-[rgba(255,255,255,0.5)] sm:text-3xl">
+							{description}
+						</p>
+					</div>
+				</a>
+			);
+		})
+	}
+</div>
