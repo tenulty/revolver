@@ -38,7 +38,7 @@ const subtitles = [
 const chosenSubtitleHTML = subtitles[randomInteger(0, subtitles.length - 1)];
 
 const responsiveSubtitleClasses =
-	"lg:left-[50%] md:left-[35%] sm:left-[15%] sm:rotate-355 md:text-3xl sm:text-2xl left-10% sm:top-full sm:w-125 sm:leading-7 sm:pt-0 pt-4 leading-4 text-lg rotate-0 block w-full";
+	"lg:left-[50%] md:left-[35%] sm:left-[15%] sm:rotate-355 md:text-3xl sm:text-2xl left-10% sm:top-full sm:w-125 sm:leading-7 sm:pt-0 pt-4 leading-4 text-lg rotate-0 block sm:absolute w-full";
 
 export const prerender = false;
 ---
@@ -64,14 +64,14 @@ export const prerender = false;
 			/>
 
 			<div
-				class={`animate-subtitle-pulse absolute text-center text-[#ffff00] text-shadow-[2.5px_2.5px_0px_#3f3f00] ${responsiveSubtitleClasses}`}
+				class={`animate-subtitle-pulse text-center text-[#ffff00] text-shadow-[2.5px_2.5px_0px_#3f3f00] ${responsiveSubtitleClasses}`}
 			>
 				<span set:html={chosenSubtitleHTML} />
 			</div>
 		</div>
 
 		<div
-			class={chosenSubtitleHTML.length > 135 ? "p-12 sm:p-26" : "p-8 sm:p-14"}
+			class={`p-3 ${chosenSubtitleHTML.length > 135 ? "sm:p-26" : "sm:p-14"}`}
 		>
 		</div>
 
