@@ -53,19 +53,14 @@ import Analytics from "@vercel/analytics/astro";
 				margin: 0;
 				width: 100%;
 				height: 100%;
-				image-rendering: pixelated;
 				font-family: "Minecraft", monospace;
 				color: white;
 			}
-
-			body {
-				background: url("/blocks/dirt-menu.webp");
-				background-size: 75px 75px;
-				background-color: #1e150f;
-			}
 		</style>
 	</head>
-	<body>
+	<body
+		class="xs:bg-size-[65px_65px] bg-[#1e150f] bg-[url(/blocks/dirt-menu.webp)] bg-size-[50px_50px] sm:bg-size-[75px_75px]"
+	>
 		<Analytics />
 		<SpeedInsights />
 
