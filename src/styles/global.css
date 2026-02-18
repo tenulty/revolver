@@ -14,3 +14,7 @@
 		animation: scale-pulse 2s ease-in-out infinite;
 	}
 }
+
+@theme {
+	--breakpoint-xs: 27.5rem;
+}
