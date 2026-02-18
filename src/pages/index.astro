@@ -80,61 +80,37 @@ export const prerender = false;
 				id="multiplayer"
 				href="/multiplayer"
 				aria-label="Multiplayer"
-				class="group outline-none select-none"
+				class="block h-fit w-fit border-4 border-solid border-black outline-none select-none hover:border-white focus:border-white"
 			>
 				<span class="hidden">Multiplayer</span>
 
 				<Image
-					class="m-auto block group-hover:hidden group-focus:hidden"
 					src="/media/multiplayer.webp"
 					alt="Minecraft Multiplayer button"
-					height={60}
-					width={600}
-					draggable={false}
-					loading="eager"
-					style="image-rendering: pixelated;"
-				/>
-
-				<Image
-					class="m-auto hidden group-hover:block group-focus:block"
-					src="/media/multiplayer-hovered.webp"
-					alt="Hovered over Minecraft Multiplayer button"
-					height={60}
-					width={600}
+					height={55}
+					width={595}
 					draggable={false}
 					loading="eager"
 					style="image-rendering: pixelated;"
 				/>
 			</a>
 
-			<div class="p-2"></div>
+			<div class="p-1.5"></div>
 
-			<div class="flex gap-3.25">
+			<div class="flex gap-2.5">
 				<a
 					id="mods"
 					href="/mods"
 					aria-label="Mods"
-					class="group outline-none select-none"
+					class="block h-fit w-fit border-4 border-solid border-black outline-none select-none hover:border-white focus:border-white"
 				>
 					<span class="hidden">Mods</span>
 
 					<Image
-						class="m-auto block group-hover:hidden group-focus:hidden"
 						src="/media/mods.webp"
 						alt="Minecraft Mods button"
-						height={60}
-						width={294}
-						draggable={false}
-						loading="eager"
-						style="image-rendering: pixelated;"
-					/>
-
-					<Image
-						class="m-auto hidden group-hover:block group-focus:block"
-						src="/media/mods-hovered.webp"
-						alt="Hovered over Minecraft Mods button"
-						height={60}
-						width={294}
+						height={55}
+						width={289}
 						draggable={false}
 						loading="eager"
 						style="image-rendering: pixelated;"
@@ -145,27 +121,15 @@ export const prerender = false;
 					id="realms"
 					href="/realms"
 					aria-label="Realms"
-					class="group outline-none select-none"
+					class="block h-fit w-fit border-4 border-solid border-black outline-none select-none hover:border-white focus:border-white"
 				>
 					<span class="hidden">Minecraft Realms</span>
 
 					<Image
-						class="m-auto block group-hover:hidden group-focus:hidden"
 						src="/media/realms.webp"
 						alt="Minecraft Realms button"
-						height={60}
-						width={294}
-						draggable={false}
-						loading="eager"
-						style="image-rendering: pixelated;"
-					/>
-
-					<Image
-						class="m-auto hidden group-hover:block group-focus:block"
-						src="/media/realms-hovered.webp"
-						alt="Hovered over Minecraft Realms button"
-						height={60}
-						width={294}
+						height={55}
+						width={289}
 						draggable={false}
 						loading="eager"
 						style="image-rendering: pixelated;"
@@ -174,18 +138,27 @@ export const prerender = false;
 			</div>
 		</div>
 	</main>
-
-	<script is:inline>
-		(() => {
-			const logo = document.getElementById("logo");
-
-			if (!logo || !(logo instanceof HTMLImageElement)) {
-				return;
-			}
-
-			logo.addEventListener("click", function () {
-				logo.src = "/media/minceraft-revolver-mode.webp";
-			});
-		})();
-	</script>
 </Layout>
+
+<script is:inline>
+	(() => {
+		const logo = document.getElementById("logo");
+
+		if (!logo || !(logo instanceof HTMLImageElement)) {
+			return;
+		}
+
+		logo.addEventListener("click", function () {
+			logo.src = "/media/minceraft-revolver-mode.webp";
+		});
+	})();
+</script>
+
+<script is:inline>
+	(() => {
+		let isGlow = false;
+		const modsGlowEffect = () => {};
+
+		setInterval(modsGlowEffect, 1000);
+	})();
+</script>
