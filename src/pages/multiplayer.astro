@@ -4,8 +4,11 @@ import { Image } from "astro:assets";
 ---
 
 <Layout>
-	<div class="flex flex-row gap-3">
+	<div
+		class="flex max-w-230 flex-row gap-3 border-4 border-solid border-transparent p-1 hover:border-white"
+	>
 		<Image
+			class="h-26 w-26"
 			src="/media/server-icon.png"
 			width={120}
 			height={120}
@@ -13,8 +16,22 @@ import { Image } from "astro:assets";
 			style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
 		/>
 
-		<h1 class="text-4xl">Play Multiplayer</h1>
+		<div class="h-full w-full">
+			<h1 class="m-0 block text-4xl leading-7">Revolver</h1>
+			<div class="p-1"></div>
+			<p
+				class="block h-full text-center text-4xl leading-7 whitespace-nowrap italic"
+			>
+				<span class="text-[#FFAA00]">
+					Once Upon A Time in... Forge Revolver.
+				</span>
+				<br />
+				<span class="text-[#AAAAAA]">
+					"Would blow your head clean off." ☠
+				</span>
+			</p>
+		</div>
 	</div>
-</Layout>
 
-<script></script>
+	<script></script>
+</Layout>
