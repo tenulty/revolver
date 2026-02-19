@@ -4,58 +4,67 @@ import { Image } from "astro:assets";
 ---
 
 <Layout>
+	<div class="p-8"></div>
+
 	<h1 class="text-center text-4xl text-shadow-[3.75px_3.75px_0px_#3F3F3F]">
 		Play Multiplayer
 	</h1>
 
-	<button
-		class="mx-auto flex w-230 flex-row gap-2 border-4 border-solid border-transparent p-1 pr-2 outline-none hover:border-white focus:border-white focus:bg-black"
+	<div class="p-2"></div>
+
+	<div
+		class="min-h-150 py-3"
+		style="background-image: linear-gradient(black 0%, rgba(0,0,0,0.4) 35px, rgba(0,0,0,0.4) calc(100% - 35px), black 100%);"
 	>
-		<Image
-			class="h-26 w-26 select-none"
-			src="/media/server-icon.png"
-			width={120}
-			height={120}
-			alt="Icon of Revolver server"
-			style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
-			draggable={false}
-		/>
+		<button
+			class="mx-auto flex w-230 flex-row gap-2 border-4 border-solid border-transparent p-1 pr-2 outline-none hover:border-white focus:border-white focus:bg-black"
+		>
+			<Image
+				class="h-26 w-26 select-none"
+				src="/media/server-icon.png"
+				width={120}
+				height={120}
+				alt="Icon of Revolver server"
+				style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+				draggable={false}
+			/>
 
-		<div class="h-full w-full">
-			<div class="flex flex-row justify-between">
-				<h2 class="m-0 block w-fit text-4xl leading-7">Revolver</h2>
-				<div class="flex items-center justify-center gap-2 text-4xl">
-					<span>
-						<span class="text-[#AAAAAA]">0</span><span class="text-[#555555]"
-							>/</span
-						><span class="text-[#AAAAAA]">20</span>
-					</span>
+			<div class="h-full w-full">
+				<div class="flex flex-row justify-between">
+					<h2 class="m-0 block w-fit text-4xl leading-7">Revolver</h2>
+					<div class="flex items-center justify-center gap-2 text-4xl">
+						<span>
+							<span class="text-[#AAAAAA]">0</span><span class="text-[#555555]"
+								>/</span
+							><span class="text-[#AAAAAA]">20</span>
+						</span>
 
-					<Image
-						class="select-none"
-						src="/media/ping-5-bars.webp"
-						width={30}
-						height={30}
-						alt="5-bar minecraft ping"
-						style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
-						draggable={false}
-					/>
+						<Image
+							class="select-none"
+							src="/media/ping-no-connection.webp"
+							width={30}
+							height={30}
+							alt="5-bar minecraft ping"
+							style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+							draggable={false}
+						/>
+					</div>
 				</div>
-			</div>
 
-			<p
-				class="mx-auto block h-full w-fit text-center text-4xl leading-7 whitespace-nowrap italic"
-			>
-				<span class="text-[#FFAA00]">
-					Once Upon A Time in... Forge Revolver.
-				</span>
-				<br />
-				<span class="text-[#AAAAAA]">
-					"Would blow your head clean off." ☠
-				</span>
-			</p>
-		</div>
-	</button>
+				<p
+					class="mx-auto block h-full w-fit text-center text-4xl leading-7 whitespace-nowrap italic"
+				>
+					<span class="text-[#FFAA00]">
+						Once Upon A Time in... Forge Revolver.
+					</span>
+					<br />
+					<span class="text-[#AAAAAA]">
+						"Would blow your head clean off." ☠
+					</span>
+				</p>
+			</div>
+		</button>
+	</div>
 
 	<script></script>
 </Layout>
