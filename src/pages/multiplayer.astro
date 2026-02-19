@@ -14,22 +14,29 @@ import { Image } from "astro:assets";
 
 	<div
 		class="min-h-150 py-3"
-		style="background-image: linear-gradient(black 0%, rgba(0,0,0,0.4) 35px, rgba(0,0,0,0.4) calc(100% - 35px), black 100%);"
+		style="background-image: linear-gradient(black 0%, rgba(0,0,0,0.45) 17px, rgba(0,0,0,0.45) calc(100% - 17px), black 100%);"
 	>
 		<button
-			class="mx-auto flex w-230 flex-row gap-2 border-4 border-solid border-transparent p-1 pr-2 outline-none hover:border-white focus:border-white focus:bg-black"
+			class="group mx-auto flex w-230 flex-row gap-2 border-4 border-solid border-transparent p-1 pr-2 outline-none focus:border-white focus:bg-black"
 		>
-			<Image
-				class="h-26 w-26 select-none"
-				src="/media/server-icon.png"
-				width={120}
-				height={120}
-				alt="Icon of Revolver server"
-				style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
-				draggable={false}
-			/>
+			<div class="relative block h-26 w-26">
+				<Image
+					class="block h-full w-full select-none"
+					src="/media/server-icon.png"
+					width={120}
+					height={120}
+					alt="Icon of Revolver server"
+					style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+					draggable={false}
+				/>
 
-			<div class="h-full w-full">
+				<div
+					class="absolute top-0 left-0 h-full w-full bg-neutral-400 opacity-0 group-hover:opacity-55"
+				>
+				</div>
+			</div>
+
+			<div class="flex-1">
 				<div class="flex flex-row justify-between">
 					<h2 class="m-0 block w-fit text-4xl leading-7">Revolver</h2>
 					<div class="flex items-center justify-center gap-2 text-4xl">
