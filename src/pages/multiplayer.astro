@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 ---
 
 <Layout>
-	<div
-		class="flex max-w-230 flex-row gap-3 border-4 border-solid border-transparent p-1 hover:border-white"
+	<button
+		class="flex w-230 flex-row gap-3 border-4 border-solid border-transparent p-1 outline-none hover:border-white focus:border-white"
 	>
 		<Image
 			class="h-26 w-26"
@@ -17,10 +17,10 @@ import { Image } from "astro:assets";
 		/>
 
 		<div class="h-full w-full">
-			<h1 class="m-0 block text-4xl leading-7">Revolver</h1>
+			<h1 class="m-0 block w-fit text-4xl leading-7">Revolver</h1>
 			<div class="p-1"></div>
 			<p
-				class="block h-full text-center text-4xl leading-7 whitespace-nowrap italic"
+				class="mx-auto block h-full w-fit text-center text-4xl leading-7 whitespace-nowrap italic"
 			>
 				<span class="text-[#FFAA00]">
 					Once Upon A Time in... Forge Revolver.
@@ -31,7 +31,7 @@ import { Image } from "astro:assets";
 				</span>
 			</p>
 		</div>
-	</div>
+	</button>
 
 	<script></script>
 </Layout>
