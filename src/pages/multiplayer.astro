@@ -34,6 +34,26 @@ import { Image } from "astro:assets";
 					class="absolute top-0 left-0 h-full w-full bg-neutral-400 opacity-0 group-hover:opacity-55"
 				>
 				</div>
+
+				<Image
+					class="absolute top-[17%] left-[50%] z-0 opacity-0 select-none group-hover:opacity-100 hover:opacity-0"
+					src="/media/play.webp"
+					width={45}
+					height={45}
+					alt="Play button"
+					style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+					draggable={false}
+				/>
+
+				<Image
+					class="absolute top-[17%] left-[50%] z-10 opacity-0 select-none hover:opacity-100"
+					src="/media/play-hovered.webp"
+					width={45}
+					height={45}
+					alt="Play button"
+					style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+					draggable={false}
+				/>
 			</div>
 
 			<div class="flex-1">
