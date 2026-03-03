@@ -62,11 +62,10 @@ export const prerender = false;
 				loading="eager"
 			/>
 
-			<div
+			<span
 				class={`animate-subtitle-pulse text-center text-[#ffff00] text-shadow-[2.5px_2.5px_0px_#3f3f00] ${responsiveSubtitleClasses}`}
-			>
-				<span set:html={chosenSubtitleHTML} />
-			</div>
+				set:html={chosenSubtitleHTML}
+			/>
 		</div>
 
 		<div
