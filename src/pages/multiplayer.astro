@@ -2,7 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-const responsiveText = "lg:text-4xl sm:text-3xl text-2xl";
+const responsiveText = "lg:text-4xl md:text-3xl sm:text-2xl text-xl";
+const responsiveServerIcon =
+	"lg:h-26 lg:w-26 md:h-23 md:w-23 sm:w-20 sm:h-20 w-18 h-18";
+const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-5";
 ---
 
 <Layout>
@@ -21,9 +24,9 @@ const responsiveText = "lg:text-4xl sm:text-3xl text-2xl";
 		<button
 			class="group mx-auto flex flex-row gap-2 border-3 border-solid border-transparent p-1 pr-2 outline-none focus:border-white focus:bg-black"
 		>
-			<div class="relative block h-26 w-26">
+			<div class={`${responsiveServerIcon} relative block`}>
 				<Image
-					class="block h-full w-full select-none sm:h-20 sm:w-20 lg:h-26 lg:w-26"
+					class={`${responsiveServerIcon} block h-full w-full select-none`}
 					src="/media/server-icon.png"
 					width={120}
 					height={120}
@@ -33,12 +36,12 @@ const responsiveText = "lg:text-4xl sm:text-3xl text-2xl";
 				/>
 
 				<div
-					class="absolute top-0 left-0 h-full w-full bg-neutral-400 opacity-0 group-hover:opacity-55"
+					class={`${responsiveServerIcon} absolute top-0 left-0 h-full w-full bg-neutral-400 opacity-0 group-hover:opacity-55`}
 				>
 				</div>
 
 				<Image
-					class="absolute top-[17%] left-[50%] z-0 h-17.5 w-11.25 opacity-0 select-none group-hover:opacity-100 hover:opacity-0"
+					class={`absolute top-[17%] left-[50%] z-0 h-17.5 w-11.25 opacity-0 select-none group-hover:opacity-100 hover:opacity-0`}
 					src="/media/play.webp"
 					width={45}
 					height={70}
@@ -48,7 +51,7 @@ const responsiveText = "lg:text-4xl sm:text-3xl text-2xl";
 				/>
 
 				<Image
-					class="absolute top-[17%] left-[50%] z-10 h-17.5 w-11.25 opacity-0 select-none hover:opacity-100"
+					class={`absolute top-[17%] left-[50%] z-10 h-17.5 w-11.25 opacity-0 select-none hover:opacity-100`}
 					src="/media/play-hovered.webp"
 					width={45}
 					height={70}
@@ -85,7 +88,7 @@ const responsiveText = "lg:text-4xl sm:text-3xl text-2xl";
 				</div>
 
 				<p
-					class={`mx-auto block px-20 text-center lg:leading-7 sm:leading-6 whitespace-nowrap italic ${responsiveText}`}
+					class={`${responsiveMotd} mx-auto block text-center lg:leading-7 sm:leading-6 leading-5 whitespace-nowrap italic ${responsiveText}`}
 				>
 					<span class="text-[#FFAA00]">
 						Once Upon A Time in... Forge Revolver.
