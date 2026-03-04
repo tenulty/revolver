@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+const pixelated =
+	"image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;";
+
+const sharedClasses =
+	"absolute top-[17%] left-[50%] z-10 h-17.5 w-11.25 opacity-0 select-none";
+---
+
+<Image
+	class={`${sharedClasses} opacity-0 group-hover:opacity-100 hover:opacity-0`}
+	src="/media/play.webp"
+	width={45}
+	height={70}
+	alt="Play button"
+	style={pixelated}
+	draggable={false}
+/>
+
+<Image
+	class={`${sharedClasses} hover:opacity-100`}
+	src="/media/play-hovered.webp"
+	width={45}
+	height={70}
+	alt="Play button hovered"
+	style={pixelated}
+	draggable={false}
+/>
