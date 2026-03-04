@@ -3,10 +3,10 @@ import MultiplayerPlay from "../components/multiplayer/MultiplayerPlay.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-const responsiveText = "lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-sm";
+const responsiveText = "lg:text-4xl md:text-3xl sm:text-2xl text-xl";
 const responsiveServerIcon =
-	"lg:h-26 lg:w-26 md:h-23 md:w-23 sm:w-21 sm:h-21 xs:w-18 xs:h-18 w-14 h-14";
-const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 xs:px-5 px-3.5";
+	"lg:h-26 lg:w-26 md:h-23 md:w-23 sm:w-21 sm:h-21 w-18 h-18";
+const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-[9vw]";
 ---
 
 <Layout>
@@ -73,14 +73,22 @@ const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 xs:px-5 px-3.5";
 				</div>
 
 				<p
-					class={`${responsiveMotd} mx-auto block text-center lg:leading-7 sm:leading-6 xs:leading-4 leading-3.5 whitespace-nowrap italic ${responsiveText}`}
+					class={`${responsiveMotd} ${responsiveText} mx-auto block text-center lg:leading-7 sm:leading-6 xs:leading-4 leading-3.5 whitespace-nowrap italic`}
 				>
-					<span class="text-[#FFAA00]">
-						Once Upon A Time in... Forge Revolver.
+					<span class="xs:inline hidden">
+						<span class="text-[#FFAA00]">
+							Once Upon A Time in... Forge Revolver.
+						</span>
+						<br />
+						<span class="text-[#AAAAAA]">
+							"Would blow your head clean off." ☠
+						</span>
 					</span>
-					<br />
-					<span class="text-[#AAAAAA]">
-						"Would blow your head clean off." ☠
+
+					<span class="xs:hidden text-lg leading-4 text-[#AAAAAA]">
+						<span class="text-[#FFAA00]">"Would blow your head</span>
+						<br />
+						<span class="text-[#AAAAAA]">clean off. ☠ "</span>
 					</span>
 				</p>
 			</div>
