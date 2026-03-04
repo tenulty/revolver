@@ -2,10 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
-const responsiveText = "lg:text-4xl md:text-3xl sm:text-2xl text-xl";
+const responsiveText = "lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-sm";
 const responsiveServerIcon =
-	"lg:h-26 lg:w-26 md:h-23 md:w-23 sm:w-21 sm:h-21 w-18 h-18";
-const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-5";
+	"lg:h-26 lg:w-26 md:h-23 md:w-23 sm:w-21 sm:h-21 xs:w-18 xs:h-18 w-14 h-14";
+const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 xs:px-5 px-3.5";
 ---
 
 <Layout>
@@ -69,7 +69,7 @@ const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-5";
 						Revolver
 					</h2>
 					<div
-						class={`flex items-center justify-center gap-2 ${responsiveText}`}
+						class={`flex items-center justify-center sm:gap-2 gap-1 ${responsiveText}`}
 					>
 						<span>
 							<span class="text-[#AAAAAA]">0</span><span class="text-[#555555]"
@@ -78,7 +78,7 @@ const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-5";
 						</span>
 
 						<Image
-							class="aspect-auto h-3.5 w-5 select-none sm:h-3.75 sm:w-5.25 md:h-4.5 md:w-6.25 lg:h-5.25 lg:w-7.5"
+							class="xs:h-3.5 xs:w-5 aspect-auto h-2.5 w-4 select-none sm:h-3.75 sm:w-5.25 md:h-4.5 md:w-6.25 lg:h-5.25 lg:w-7.5"
 							src="/media/ping-no-connection.webp"
 							width={30}
 							height={30}
@@ -90,7 +90,7 @@ const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-5";
 				</div>
 
 				<p
-					class={`${responsiveMotd} mx-auto block text-center lg:leading-7 sm:leading-6 leading-4 whitespace-nowrap italic ${responsiveText}`}
+					class={`${responsiveMotd} mx-auto block text-center lg:leading-7 sm:leading-6 xs:leading-4 leading-3.5 whitespace-nowrap italic ${responsiveText}`}
 				>
 					<span class="text-[#FFAA00]">
 						Once Upon A Time in... Forge Revolver.
