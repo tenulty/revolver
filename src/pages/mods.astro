@@ -1,4 +1,5 @@
 ---
+import MinecraftButton from "../components/MinecraftButton.astro";
 import Layout from "../layouts/Layout.astro";
 import Modlist from "../components/Modlist.astro";
 import type { Mod } from "../components/Modlist.astro";
@@ -103,12 +104,26 @@ const mods: Mod[] = [
 
 <Layout>
 	<div class="flex flex-col items-center justify-center px-3 py-8">
-		<h1 class="block pb-3 text-center text-3xl sm:text-4xl">Installed Mods</h1>
+		<h1 class="block pb-3 text-center text-3xl leading-8 sm:text-4xl">
+			&#9935; Install Client-only Mods
+		</h1>
 		<p
-			class="text-center text-xl leading-5 text-[rgba(255,255,255,0.5)] sm:text-2xl"
+			class="mb-7 text-center text-xl leading-5 text-[rgba(255,255,255,0.5)] sm:text-2xl"
 		>
 			Forge version 1.20.1, these are all required for joining.
 		</p>
+
+		<MinecraftButton
+			id="return"
+			href="/"
+			label="Return to Menu"
+			image={{
+				src: "/media/return-to-menu.webp",
+				alt: "Minecraft return button",
+				width: 540,
+				height: 55,
+			}}
+		/>
 	</div>
 
 	<div class="bg-[rgba(0,0,0,0.4)] py-10">

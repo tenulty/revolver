@@ -1,5 +1,99 @@
 ---
+import MultiplayerPlay from "../components/multiplayer/MultiplayerPlay.astro";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const responsiveText = "lg:text-4xl md:text-3xl sm:text-2xl text-xl";
+const responsiveServerIcon =
+	"lg:h-26 lg:w-26 md:h-23 md:w-23 sm:w-21 sm:h-21 w-18 h-18";
+const responsiveMotd = "lg:px-20 md:px-15 sm:px-10 px-[9vw]";
 ---
 
-<Layout />
+<Layout>
+	<div class="p-8"></div>
+
+	<h1 class="text-center text-4xl text-shadow-[3.75px_3.75px_0px_#3F3F3F]">
+		Play Multiplayer
+	</h1>
+
+	<div class="p-2"></div>
+
+	<div
+		class="min-h-150 py-3"
+		style="background-image: linear-gradient(black 0%, rgba(0,0,0,0.5) 17px, rgba(0,0,0,0.5) calc(100% - 17px), black 100%);"
+	>
+		<button
+			class="group mx-auto flex flex-row gap-2 border-3 border-solid border-transparent p-1 pr-2 outline-none focus:border-white focus:bg-black"
+		>
+			<div class={`${responsiveServerIcon} relative block`}>
+				<Image
+					class={`${responsiveServerIcon} block h-full w-full select-none`}
+					src="/media/server-icon.png"
+					width={120}
+					height={120}
+					alt="Icon of Revolver server"
+					style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+					draggable={false}
+				/>
+
+				<div
+					class={`${responsiveServerIcon} absolute top-0 left-0 h-full w-full bg-neutral-400 opacity-0 group-hover:opacity-55`}
+				>
+				</div>
+
+				<MultiplayerPlay />
+			</div>
+
+			<div class="flex-1">
+				<div class="flex flex-row justify-between">
+					<h2
+						class={`m-0 block w-fit md:leading-7 leading-5 ${responsiveText}`}
+					>
+						Revolver
+					</h2>
+					<div
+						class={`flex items-center justify-center sm:gap-2 gap-1 ${responsiveText}`}
+					>
+						<span>
+							<span class="text-[#AAAAAA]">0</span><span class="text-[#555555]"
+								>/</span
+							><span class="text-[#AAAAAA]">20</span>
+						</span>
+
+						<Image
+							class="xs:h-3.5 xs:w-5 aspect-auto h-2.5 w-4 select-none sm:h-3.75 sm:w-5.25 md:h-4.5 md:w-6.25 lg:h-5.25 lg:w-7.5"
+							src="/media/ping-no-connection.webp"
+							width={30}
+							height={30}
+							alt="5-bar minecraft ping"
+							style="image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; image-rendering: pixelated;"
+							draggable={false}
+						/>
+					</div>
+				</div>
+
+				<p
+					class={`${responsiveMotd} ${responsiveText} mx-auto block text-center lg:leading-7 sm:leading-6 xs:leading-4 leading-3.5 whitespace-nowrap italic`}
+				>
+					<span class="xs:inline hidden">
+						<span class="text-[#FFAA00]">
+							Once Upon A Time in... Forge Revolver.
+						</span>
+						<br />
+						<span class="text-[#AAAAAA]">
+							"Would blow your head clean off." ☠
+						</span>
+					</span>
+
+					<span class="xs:hidden text-lg leading-4 text-[#AAAAAA]">
+						<span class="text-[#FFAA00]">"Would blow your head</span>
+						<br />
+						<span class="text-[#AAAAAA]">clean off. ☠ "</span>
+					</span>
+				</p>
+			</div>
+		</button>
+	</div>
+
+	<script></script>
+</Layout>

@@ -16,5 +16,6 @@
 }
 
 @theme {
-	--breakpoint-xs: 27.5rem;
+	--breakpoint-xs: 30rem;
+	--breakpoint-2xs: 27.5rem;
 }
